@@ -10,30 +10,15 @@
     <title>DLV</title>
 </head>
 <body>
-    <header>
-        <div class="company_nm">
-            <h1>De La Villa</h1>
-        </div>
-        <div class="user_info">
-            <div class="user_nm">
-                <h3>Username</h3>
-            </div>
-            <button type="button">Login / Logout</button>
-        </div>
-    </header>
+    {% include 'operation/op-bar.html' %}
     <main>
         <div class="import_content">
-            {% block content %}
-
-            {%endblock%}
+            <div class="order_container">
+                <div class="order_customer"></div>
+                <div class="order_ls"></div>
+            </div>
         </div>
-    </main>    
-    <footer>
-        <nav class="navbar">
-            <a class="navoption" id="nav1" href=""><small>Home</small></a>
-            <a class="navoption" id="nav2" href=""><small>Customer</small></a>
-            <a class="navoption" id="nav3" href=""><small>Order</small></a>
-        </nav>
-    </footer>
+    </main>
+    {% include 'operation/op-nav.html' %}
 </body>
 </html>

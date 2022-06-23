@@ -1,33 +1,45 @@
-{% extends 'operation/operationmain.html' %}
+{% load static %}
 
-{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles/customer.css' %} ">
+    <title>Document</title>
+</head>
+<body>
+    {% include 'operation/op-bar.html' %}
 
-<div class="customer_content">
-    <div class="customer_ops">
-        <select name="" id="">
-            <option value="">Search Customer</option>
-        </select>
-        <button type="button">Register Customer</button>
+    <div class="customer_content">
+        <div class="customer_ops">
+            <select name="" id="">
+                <option value="">Search Customer</option>
+            </select>
+            <button type="button">Register Customer</button>
+        </div>
+        <div class="customer_info">
+            <div class="customer_img"></div>
+            <div class="customer_bio"></div>
+            <div class="customer_order"></div>
+        </div>
+        <div class="customer_listorder">
+            <div>Orders</div>
+            <table>
+                <tr>
+                    <th>ID Order</th>
+                    <th>Bread</th>
+                    <th>Category</th>
+                    <th>Amount</th>
+                    <th>Due Date</th>
+                    <th></th>
+                </tr>
+            </table>
+        </div>
     </div>
-    <div class="customer_info">
-        <div class="customer_img"></div>
-        <div class="customer_bio"></div>
-        <div class="customer_order"></div>
-    </div>
-    <div class="customer_listorder">
-        <div>Orders</div>
-        <table>
-            <tr>
-                <th>ID Order</th>
-                <th>Bread</th>
-                <th>Category</th>
-                <th>Amount</th>
-                <th>Due Date</th>
-                <th></th>
-            </tr>
-        </table>
-    </div>
-</div>
-
-{% endblock %}
+    
+    {% include 'operation/op-nav.html' %}
+</body>
+</html>
 

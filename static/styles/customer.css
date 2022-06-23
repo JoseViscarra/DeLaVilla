@@ -1,0 +1,46 @@
+@import url(op-bar.css);
+@import url(op-nav.css);
+
+*{
+    margin: none;
+    padding: none;
+}
+.customer_content{
+    height: 83vh;
+    display: block;
+    border: solid green 2px;
+}
+.customer_ops{
+    height: 5%;
+    width: 100%;
+    margin-top: 1%;
+    display: flex;
+    position: relative;
+    justify-content: right;
+}
+.customer_ops select{
+    width: 10%;
+    margin-right: 2%;
+}
+.customer_ops button{
+    width: 10%;
+    margin-right: 2%;
+}
+.customer_info{
+    height: 30%;
+    display: block;
+}
+.customer_listorder{
+    height: 62%;
+    display: block;
+    position: relative;
+    justify-content: center;
+}
+.customer_listorder table{
+    position: absolute;
+    width: 80%;
+    top: 5%;
+    left: 10%;
+    background: white;
+
+}
