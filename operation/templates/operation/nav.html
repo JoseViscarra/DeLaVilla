@@ -1,0 +1,86 @@
+<div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bxs-baguette'></i>
+        <div class="logo_name">De La Villa</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+        <a href="{% url 'dashboard' %}">
+          <i class='bx bx-grid-alt'></i>
+          <span class="links_name">Dashboard</span>
+        </a>
+         <span class="tooltip">Dashboard</span>
+      </li>
+     <li>
+       <a href="{% url 'production' %}">
+         <i class='bx bx-baguette' ></i>
+         <span class="links_name">Prodcution</span>
+       </a>
+       <span class="tooltip">Production</span>
+     </li>
+     <li>
+       <a href="{% url 'orders' %}">
+         <i class='bx bx-cart-alt' ></i>
+         <span class="links_name">Orders</span>
+       </a>
+       <span class="tooltip">Orders</span>
+     </li>
+     <li>
+       <a href="{% url 'customer' %}">
+         <i class='bx bx-user' ></i>
+         <span class="links_name">Customer</span>
+       </a>
+       <span class="tooltip">Customer</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-money' ></i>
+         <span class="links_name">Finance</span>
+       </a>
+       <span class="tooltip">Finance</span>
+     </li>
+     <li>
+        <a href="#">
+          <i class='bx bxs-report' ></i>
+          <span class="links_name">Report</span>
+        </a>
+        <span class="tooltip">Report</span>
+      </li>
+     <li class="profile">
+         <div class="profile-details">
+           <!--<img src="profile.jpg" alt="profileImg">-->
+           <div class="name_job">
+             <div class="name">Username</div>
+             <div class="job">Job</div>
+           </div>
+         </div>
+         <i class='bx bx-log-out' id="log_out" ></i>
+     </li>
+    </ul>
+</div>
+  
+  <script>
+  let sidebar = document.querySelector(".sidebar");
+  let closeBtn = document.querySelector("#btn");
+  let searchBtn = document.querySelector(".bx-search");
+
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();//calling the function(optional)
+  });
+
+  searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
+    sidebar.classList.toggle("open");
+    menuBtnChange(); //calling the function(optional)
+  });
+
+  // following are the code to change sidebar button(optional)
+  function menuBtnChange() {
+   if(sidebar.classList.contains("open")){
+     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+   }else {
+     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+   }
+  }
+  </script>

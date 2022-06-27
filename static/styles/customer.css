@@ -1,10 +1,5 @@
-@import url(op-bar.css);
-@import url(op-nav.css);
+@import url(nav.css);
 
-*{
-    margin: none;
-    padding: none;
-}
 .customer_content{
     height: 83vh;
     display: block;
