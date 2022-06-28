@@ -19,5 +19,43 @@
     color: #11101d;
     font-size: 25px;
     font-weight: 500;
-    margin: 18px
+    margin: 18px;
   }
+  /* ----------------------------------- */
+
+.dash_container{
+  position: relative;
+  height: 70%;
+  width: 80%;
+  top: 50%;
+  transform: translateY(-60%);
+  left: 10%;
+
+}
+.dash_grid{
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(11, 1fr);
+  gap: 2%;
+}
+.dash_grid div{
+  width: 100%;
+  text-align: center;
+  border: solid #11101D 1px;
+  border-radius: 35px;
+}
+.dash_production{
+  grid-row-start: 1;
+  grid-row-end: 12;
+}
+.dash_orders_pending{
+  grid-column-start: 3;
+  grid-row-start: 2;
+  grid-row-end: 7;
+}
+.dash_orders_delivered{
+  grid-column-start: 3;
+  grid-row-start: 7;
+  grid-row-end: 12;
+}

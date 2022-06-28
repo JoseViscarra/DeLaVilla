@@ -1,41 +1,86 @@
-@import url(nav.css);
+@import url('nav.css');
 
-.customer_content{
-    height: 83vh;
-    display: block;
-    border: solid green 2px;
-}
-.customer_ops{
-    height: 5%;
-    width: 100%;
-    margin-top: 1%;
+.home-section{
+    position: relative;
+    background: #E4E9F7;
+    height: 100vh;
+    top: 0;
+    left: 78px;
+    width: calc(100% - 78px);
+    transition: all 0.5s ease;
+    z-index: 2;
+  }
+  .sidebar.open ~ .home-section{
+    left: 250px;
+    width: calc(100% - 250px);
+  }
+  .home-section .text{
+    display: inline-block;
+    color: #11101d;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 18px;
+    
+  }
+  /* ----------------------------------- */
+  .cust_gen_info{
+    position: relative;
+    float:  right;
+    margin: 18px;
+    height: 35px;
+    width: 40%;
     display: flex;
-    position: relative;
-    justify-content: right;
-}
-.customer_ops select{
-    width: 10%;
+  }
+  .cust_status{
+    font-size: large;
     margin-right: 2%;
-}
-.customer_ops button{
-    width: 10%;
-    margin-right: 2%;
-}
-.customer_info{
-    height: 30%;
-    display: block;
-}
-.customer_listorder{
-    height: 62%;
-    display: block;
+    width: 25%;
+    text-align: center;
+    border: solid 1px #11101d;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px rgba(59, 59, 59, 0.5);
+  }
+  .cust_status span{
     position: relative;
-    justify-content: center;
-}
-.customer_listorder table{
-    position: absolute;
-    width: 80%;
-    top: 5%;
-    left: 10%;
-    background: white;
+    top: 9%;
+  }
+  span:first-child{
+    font-size: larger;
+  }
+  .cust_status:nth-child(2){
+    background: rgb(0, 153, 0);
+    color: white;
+    border: none;
+  }
+  .cust_status:nth-child(3){
+    background: rgb(214, 4, 4);
+    color: white;
+    border: none;
+  }
+  .bx-user-plus{
+    font-size: x-large;
+  }
+  .cust_gen_info button{
+    width: 25%;
+    border: solid 1px #11101d;
+    border-radius: 25px;
+    background: transparent;
+    box-shadow: 5px 5px 5px rgba(59, 59, 59, 0.5);
+  }
+  .cust_gen_info button:hover{
+    color: white;
+    background: #11101d;
+    transition: 0.3s;
+  }
+  .cust_list{
+    height: 85%;
+    width: 95%;
+    position: relative;
+    left: 2.5%;
+    top: 50%;
+    transform: translateY(-55%);
+    border-radius: 35px;
+    box-shadow: 5px 5px 10px rgba(59, 59, 59, 0.5);
+  }
 
-}
+  
