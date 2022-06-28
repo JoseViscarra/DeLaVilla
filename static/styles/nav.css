@@ -24,7 +24,7 @@
     align-items: center;
     position: relative;
   }
-  .sidebar .logo-details .bxs-baguette{
+  .sidebar .logo-details .bxs-factory{
     opacity: 0;
     transition: all 0.3s ease;
   }
@@ -35,7 +35,7 @@
     opacity: 0;
     transition: all 0.3s ease;
   }
-  .sidebar.open .logo-details .bxs-baguette,
+  .sidebar.open .logo-details .bxs-factory,
   .sidebar.open .logo-details .logo_name{
     opacity: 1;
   }
