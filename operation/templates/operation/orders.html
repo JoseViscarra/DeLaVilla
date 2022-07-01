@@ -7,11 +7,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'styles/orders.css' %}">
+    <link rel="icon" href="{% static 'styles/images/favicon16x16.png' %}">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <title>DLV</title>
 </head>
 <body>
     {% include 'operation/nav.html' %}
-    
+
+    <section class="home-section">
+        <div class="text">Orders</div>
+        <div class="ord_gen_info">
+            <div class="ord_stat">
+                <span>#</span>
+                <span>Customers</span>
+            </div>
+            <div class="ord_stat">
+                <span>#</span>
+                <span>Delivered</span>
+            </div>
+            <div class="ord_stat">
+                <span>#</span>
+                <span>Pending</span>
+            </div>
+            <button type="button">
+                <i class='bx bx-cart-add'></i>
+            </button>
+        </div>
+        <div class="ord_grid">
+            <div class="container ord_ratio">Pie Chart</div>
+            <div class="container ord_pend">Pending</div>
+            <div class="container ord_deliv">Delivered</div>
+            <div class="container ord_list">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Customer</th>
+                            <th>Product</th>
+                            <th>Units</th>
+                            <th>Price</th>
+                            <th>Due Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>r</td>
+                        </tr>                                                                                                                                                                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>   
 </body>
 </html>

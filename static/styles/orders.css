@@ -1,1 +1,126 @@
 @import url('nav.css');
+
+.home-section{
+    position: relative;
+    background: #E4E9F7;
+    height: 100vh;
+    top: 0;
+    left: 78px;
+    width: calc(100% - 78px);
+    transition: all 0.5s ease;
+    z-index: 2;
+  }
+  .sidebar.open ~ .home-section{
+    left: 250px;
+    width: calc(100% - 250px);
+  }
+  .home-section .text{
+    display: inline-block;
+    color: #11101d;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 18px;
+  }
+
+/*-----------------------------------------*/
+.ord_gen_info{
+    display: flex;
+    position: relative;
+    float: right;
+    height: 35px;
+    width: 40%;
+    margin: 18px;
+}
+.ord_stat{
+    font-size: large;
+    margin-right: 2%;
+    width: 25%;
+    text-align: center;
+    border: solid 1px #11101d;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px rgba(59, 59, 59, 0.5);
+}
+.ord_stat span{
+    position: relative;
+    top: 9%;
+}
+span:first-child{
+    font-size: larger;
+}
+.ord_stat:nth-child(2){
+    background: rgb(0, 153, 0);
+    color: white;
+    border: none;
+}
+.ord_stat:nth-child(3){
+    background: rgb(211, 138, 3);
+    color: white;
+    border: none;
+}
+.bx-cart-add{
+    font-size: x-large;
+}
+.ord_gen_info button{
+    width: 25%;
+    border: solid 1px #11101d;
+    border-radius: 25px;
+    background: transparent;
+    box-shadow: 5px 5px 5px rgba(59, 59, 59, 0.5);
+}
+.ord_gen_info button:hover{
+    color: white;
+    background: #11101d;
+    transition: 0.3s;
+}
+.ord_grid{
+    height: 85%;
+    width: 95%;
+    position: relative;
+    left: 2.5%;
+    top: 27%;
+    transform: translateY(-30%);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2%;
+    row-gap: 3%;
+}
+.ord_grid > div{
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px rgba(59, 59, 59, 0.5);
+}
+.ord_pend{
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+.ord_deliv{
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+.ord_list{
+    grid-row-start: 1;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    overflow: auto;
+}
+table{
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    border-collapse: collapse;
+}
+thead{
+    background: #11101d;
+    color: white;
+    height: 6%;
+    width: 100%;
+    text-transform: uppercase;
+    border-radius: 15px;
+}
+tbody{
+    display: block;
+}
+tbody > tr:nth-of-type(even){
+    background: #f3f3f3;
+}
